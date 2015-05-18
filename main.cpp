@@ -84,7 +84,7 @@ void saveToXml(string filename, vector<Data> data) {
 	document.SaveFile(filename.c_str());
 }
 
-void loadxml(string filename, vector<Data> & data) {
+void loadXml(string filename, vector<Data> & data) {
 	Data it;
 	tinyxml2::XMLDocument doc;
 	doc.LoadFile(filename.c_str());
@@ -164,7 +164,7 @@ int main() {
 		consoleOutput(newData);
 	}
 	if (answer == "check") {
-		loadxml("data.xml", oldData);
+		loadXml("data.xml", oldData);
 		consoleOutput(compareData(newData, oldData));
 	}
 	if ((answer != "save") && (answer != "check")) {
