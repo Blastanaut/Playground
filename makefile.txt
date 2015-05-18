@@ -1,0 +1,5 @@
+boost_include = /home/impossibleiseasy/boost_1_57_0/install-dir/include
+boost_lib = /home/impossibleiseasy/boost_1_57_0/install-dir/lib
+
+all:
+	g++ main.cpp tinyxml2.h tinyxml2.cpp -lboost_system -lboost_filesystem -I$(boost_include) -L$(boost_lib) -std=c++11 -o impossibleiseasy
